@@ -1,0 +1,53 @@
+section {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  background-color: gray;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.moviegrid {
+  display: grid;
+}
+
+@media only screen and (max-width: 400px) {
+  .moviegrid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .moviegrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .moviegrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .moviegrid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  section {
+    width: 80%;
+  }
+  .moviegrid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+  }
+}

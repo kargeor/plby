@@ -1,0 +1,64 @@
+.nominee {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  border: 1px solid black;
+  background-color: #009b86;
+
+  transition: background-color ease 0.5s;
+}
+
+.nominee.selected {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  border: 1px solid blue;
+  background-color: navy;
+}
+
+.nominee:hover {
+  background-color: #34ac9c;
+}
+
+.nominee.selected:hover {
+  background-color: darkblue;
+}
+
+.nominee .title {
+  padding: 1rem;
+}
+
+.nominee .image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.nominee .image img {
+  height: 100%;
+}
+
+.nominee button {
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  background-color: lightgray;
+  border: 1px solid black;
+}
+
+.nominee button:hover {
+  color: white;
+  background-color: gray;
+}
+
+/*
+.nominee button:active {
+  color: navy;
+  background-color: gray;
+}
+*/

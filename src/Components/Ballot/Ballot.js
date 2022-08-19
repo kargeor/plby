@@ -1,11 +1,23 @@
-import React from 'react';
+import Nominee from "../Nominee/Nominee";
+import "./Ballot.css";
 
-const Ballot = () => {
+const Ballot = ({ category, vote, dispatch }) => {
   return (
-    <div className='ballot'>
-      'Your Code Goes Here'
-    </div>
-  )
-}
+    <section>
+      <h1>{category.title}</h1>
+      <div className="moviegrid">
+        {category.nominees.map((nominee) => (
+          <Nominee
+            details={nominee}
+            key={nominee.title}
+            selected={vote === nominee.title}
+            categoryKey={category.key}
+            dispatch={dispatch}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Ballot;
