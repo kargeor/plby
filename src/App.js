@@ -100,7 +100,7 @@ function reducer(state, action) {
         },
       };
     case "submit":
-      return { ...state, completed: true };
+      return { ...state, completed: false };
     case "undo_submit":
       return { ...state, completed: false };
     default:
